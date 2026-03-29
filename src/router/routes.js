@@ -8,27 +8,33 @@ export const routes = [
         path: '',
         name: 'dashboard',
         component: () => import('@/pages/dashboard/DashboardPage.vue'),
-        meta: { title: 'Dashboard' }
+        meta: { title: 'Dashboard' },
       },
       {
         path: 'users',
         name: 'users',
         component: () => import('@/features/users/pages/UsersListPage.vue'),
-        meta: { title: 'Users' }
+        meta: { title: 'Users' },
       },
       {
         path: 'users/create',
         name: 'users-create',
         component: () => import('@/features/users/pages/UserFormPage.vue'),
-        meta: { title: 'Create User' }
+        meta: { title: 'Create User' },
       },
       {
         path: 'users/:id/edit',
         name: 'users-edit',
         component: () => import('@/features/users/pages/UserFormPage.vue'),
-        meta: { title: 'Edit User' }
-      }
-    ]
+        meta: { title: 'Edit User' },
+      },
+      {
+        path: 'settings',
+        name: 'settings',
+        component: () => import('@/pages/settings/SettingsPage.vue'),
+        meta: { title: 'Settings' },
+      },
+    ],
   },
   {
     path: '/login',
@@ -38,13 +44,13 @@ export const routes = [
       {
         path: '',
         name: 'login',
-        component: () => import('@/pages/auth/LoginPage.vue')
-      }
-    ]
+        component: () => import('@/pages/auth/LoginPage.vue'),
+      },
+    ],
   },
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    component: () => import('@/pages/NotFoundPage.vue')
-  }
+    component: () => import('@/pages/NotFoundPage.vue'),
+  },
 ]

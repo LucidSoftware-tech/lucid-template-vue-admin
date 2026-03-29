@@ -1,5 +1,5 @@
 export const appConfig = {
-  name: 'Admin Panel',
+  name: 'Lucid Template',
   description: 'Production-ready SaaS Admin Template',
   logo: null,
   logoIcon: 'RocketIcon',

@@ -18,7 +18,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div :class="cn('w-full overflow-auto rounded-md border border-border shadow-sm', props.class)">
+  <div :class="cn('w-full overflow-auto rounded-md border border-border', props.class)">
     <table class="w-full caption-bottom text-sm">
       <thead class="bg-muted/50 [&_tr]:border-b [&_tr]:border-border">
         <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">

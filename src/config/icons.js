@@ -1,6 +1,7 @@
 import {
   LayoutDashboard as DashboardIcon,
   Users as UsersIcon,
+  Settings as SettingsIcon,
   LogOut as LogOutIcon,
   Menu as MenuIcon,
   X as CloseIcon,
@@ -13,12 +14,16 @@ import {
   MoreVertical,
   Inbox,
   Rocket,
-  Bell
+  Bell,
+  Pencil,
+  Trash2,
+  Home
 } from 'lucide-vue-next'
 
 export const icons = {
   DashboardIcon,
   UsersIcon,
+  SettingsIcon,
   LogOutIcon,
   MenuIcon,
   CloseIcon,
@@ -31,5 +36,8 @@ export const icons = {
   MoreVertical,
   Inbox,
   RocketIcon: Rocket,
-  BellIcon: Bell
+  BellIcon: Bell,
+  PencilIcon: Pencil,
+  TrashIcon: Trash2,
+  HomeIcon: Home,
 }

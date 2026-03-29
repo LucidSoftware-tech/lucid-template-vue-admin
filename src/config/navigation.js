@@ -11,4 +11,10 @@ export const navigation = [
     path: '/users',
     icon: 'UsersIcon',
   },
+  {
+    title: 'Settings',
+    name: 'settings',
+    path: '/settings',
+    icon: 'SettingsIcon',
+  },
 ]

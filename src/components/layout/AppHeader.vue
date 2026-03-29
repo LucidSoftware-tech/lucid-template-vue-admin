@@ -23,7 +23,7 @@ const userInitials = computed(() => {
   return name.charAt(0).toUpperCase()
 })
 
-const userName = computed(() => {
+const displayName = computed(() => {
   return authStore.user?.name || authStore.user?.email || ''
 })
 
@@ -52,20 +52,12 @@ const handleLogout = () => {
     </div>
 
     <div class="flex items-center gap-x-4">
-      <!-- Notification Bell -->
-      <button class="relative text-gray-400 hover:text-gray-500 focus:outline-none transition-colors">
-        <span class="absolute -right-0.5 -top-0.5 block h-2 w-2 rounded-full bg-primary ring-2 ring-white"></span>
-        <component :is="icons.BellIcon" class="h-[18px] w-[18px]" />
-      </button>
-
-      <div class="hidden sm:block h-5 w-px bg-gray-200" aria-hidden="true"></div>
-
-      <!-- User -->
+      <!-- User name + avatar -->
       <div class="flex items-center gap-2.5">
-        <div :class="cn('flex h-7 w-7 items-center justify-center rounded-full bg-primary/10 text-primary')">
-          <span class="text-xs font-bold leading-none">{{ userInitials }}</span>
+        <span class="text-[13px] font-medium text-gray-600 hidden sm:block">{{ displayName }}</span>
+        <div :class="cn('flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 text-gray-600 border border-gray-200')">
+          <span class="text-xs font-semibold leading-none">{{ userInitials }}</span>
         </div>
-        <span class="text-[13px] font-medium text-gray-600 hidden sm:block">{{ userName }}</span>
       </div>
 
       <!-- Logout -->

@@ -15,16 +15,17 @@ const columns = [
   { key: 'email', label: 'Email' },
   { key: 'role', label: 'Role' },
   { key: 'status', label: 'Status' },
-  { key: 'created_at', label: 'Date Added' },
+  { key: 'actions', label: 'Actions', headerClass: 'text-right', cellClass: 'text-right' },
 ]
 </script>
 
 <template>
-  <div class="space-y-4">
+  <div class="space-y-5">
+    <!-- Page Header -->
     <div class="flex items-center justify-between">
       <div>
         <h2 class="text-xl font-bold tracking-tight text-gray-900">Users</h2>
-        <p class="mt-1 text-[13px] text-gray-500">Manage your users and their permissions.</p>
+        <p class="mt-1 text-[13px] text-gray-500">Manage your team members and their account permissions here.</p>
       </div>
       <router-link to="/users/create">
         <UiButton size="sm">
@@ -34,42 +35,62 @@ const columns = [
       </router-link>
     </div>
 
-    <UiCard>
-      <div class="flex items-center justify-between pb-4">
-        <UiInput
-          v-model="search"
-          placeholder="Search users..."
-          class="max-w-xs"
-        >
-          <template #icon>
-            <component :is="icons.Search" class="h-4 w-4" />
-          </template>
-        </UiInput>
-      </div>
-
-      <UiTable
-        :columns="columns"
-        :data="data?.data"
-        :loading="isLoading || isFetching"
+    <!-- Search -->
+    <div>
+      <UiInput
+        v-model="search"
+        placeholder="Search users..."
+        class="max-w-xs"
       >
-        <template #status="{ item }">
-          <UiBadge
-            :variant="item.status === 'active' ? 'success' : 'secondary'"
-          >
-            {{ item.status }}
-          </UiBadge>
+        <template #icon>
+          <component :is="icons.Search" class="h-4 w-4" />
         </template>
-      </UiTable>
+      </UiInput>
+    </div>
 
-      <div class="mt-4">
-        <UiPagination
-          v-if="data?.meta"
-          :page="page"
-          @update:page="page = $event"
-          :limit="data.meta.limit"
-          :total="data.meta.total"
-        />
-      </div>
-    </UiCard>
+    <!-- Table -->
+    <UiTable
+      :columns="columns"
+      :data="data?.data"
+      :loading="isLoading || isFetching"
+    >
+      <template #role="{ item }">
+        <UiBadge
+          :variant="item.role === 'Admin' ? 'default' : 'outline'"
+        >
+          {{ item.role }}
+        </UiBadge>
+      </template>
+
+      <template #status="{ item }">
+        <UiBadge
+          :variant="item.status === 'Active' ? 'success' : 'outline'"
+        >
+          {{ item.status }}
+        </UiBadge>
+      </template>
+
+      <template #actions="{ item }">
+        <div class="flex items-center justify-end gap-1">
+          <router-link :to="`/users/${item.id}/edit`">
+            <button class="inline-flex h-8 w-8 items-center justify-center rounded-md text-gray-400 hover:bg-gray-50 hover:text-gray-600 transition-colors">
+              <component :is="icons.PencilIcon" class="h-4 w-4" />
+            </button>
+          </router-link>
+          <button class="inline-flex h-8 w-8 items-center justify-center rounded-md text-gray-400 hover:bg-red-50 hover:text-red-500 transition-colors">
+            <component :is="icons.TrashIcon" class="h-4 w-4" />
+          </button>
+        </div>
+      </template>
+    </UiTable>
+
+    <!-- Pagination -->
+    <UiPagination
+      v-if="data?.meta"
+      :page="page"
+      @update:page="page = $event"
+      :limit="data.meta.limit"
+      :total="data.meta.total"
+    />
   </div>
 </template>
