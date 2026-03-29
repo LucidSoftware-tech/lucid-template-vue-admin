@@ -1,37 +1,36 @@
 <script setup>
 import { appConfig } from '@/config/app'
-import { UiCard } from '@/components/ui'
 </script>
 
 <template>
   <div class="space-y-6">
-    <UiCard>
-      <template #header>
-        <h2 class="text-2xl font-bold tracking-tight">Welcome to {{ appConfig.name }}!</h2>
-        <p class="text-muted-foreground">
-          This is a sample dashboard overview. You can configure your app preferences and settings here.
-        </p>
-      </template>
-      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <div class="rounded-xl border bg-card text-card-foreground shadow space-y-2 p-6">
-          <h3 class="font-semibold text-sm text-muted-foreground uppercase tracking-wider">Total Users</h3>
-          <div class="text-3xl font-bold">128</div>
-        </div>
-        <div class="rounded-xl border bg-card text-card-foreground shadow space-y-2 p-6">
-          <h3 class="font-semibold text-sm text-muted-foreground uppercase tracking-wider">Active Sessions</h3>
-          <div class="text-3xl font-bold">34</div>
-        </div>
-        <div class="rounded-xl border bg-card text-card-foreground shadow space-y-2 p-6">
-          <h3 class="font-semibold text-sm text-muted-foreground uppercase tracking-wider">Revenue</h3>
-          <div class="text-3xl font-bold">$12,450</div>
-        </div>
-        <div class="rounded-xl border bg-card text-card-foreground shadow space-y-2 p-6">
-          <h3 class="font-semibold text-sm text-muted-foreground uppercase tracking-wider">System Status</h3>
-          <div class="flex items-center text-3xl font-bold text-emerald-500">
-            Online
-          </div>
-        </div>
+    <div>
+      <h2 class="text-xl font-bold tracking-tight text-gray-900">Dashboard</h2>
+      <p class="mt-1 text-[13px] text-gray-500">
+        Welcome to {{ appConfig.name }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="rounded-xl border border-gray-200 bg-white px-5 py-4">
+        <p class="text-[13px] font-medium text-gray-500">Total Users</p>
+        <p class="mt-3 text-2xl font-bold tracking-tight text-gray-900">—</p>
       </div>
-    </UiCard>
+
+      <div class="rounded-xl border border-gray-200 bg-white px-5 py-4">
+        <p class="text-[13px] font-medium text-gray-500">Active Sessions</p>
+        <p class="mt-3 text-2xl font-bold tracking-tight text-gray-900">—</p>
+      </div>
+
+      <div class="rounded-xl border border-gray-200 bg-white px-5 py-4">
+        <p class="text-[13px] font-medium text-gray-500">Revenue</p>
+        <p class="mt-3 text-2xl font-bold tracking-tight text-gray-900">—</p>
+      </div>
+
+      <div class="rounded-xl border border-gray-200 bg-white px-5 py-4">
+        <p class="text-[13px] font-medium text-gray-500">Growth</p>
+        <p class="mt-3 text-2xl font-bold tracking-tight text-gray-900">—</p>
+      </div>
+    </div>
   </div>
 </template>

@@ -11,7 +11,9 @@ import {
   Search,
   Plus,
   MoreVertical,
-  Inbox
+  Inbox,
+  Rocket,
+  Bell
 } from 'lucide-vue-next'
 
 export const icons = {
@@ -27,5 +29,7 @@ export const icons = {
   Search,
   Plus,
   MoreVertical,
-  Inbox
+  Inbox,
+  RocketIcon: Rocket,
+  BellIcon: Bell
 }

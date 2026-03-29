@@ -2,7 +2,7 @@
 import { usePagination } from '@/composables/usePagination'
 import { useDebouncedRef } from '@/composables/useDebounce'
 import { useUsers } from '../composables/useUsers'
-import { UiCard, UiTable, UiPagination, UiBadge, UiInput } from '@/components/ui'
+import { UiCard, UiTable, UiPagination, UiBadge, UiInput, UiButton } from '@/components/ui'
 import { icons } from '@/config/icons'
 
 const { page, limit } = usePagination()
@@ -21,21 +21,32 @@ const columns = [
 
 <template>
   <div class="space-y-4">
+    <div class="flex items-center justify-between">
+      <div>
+        <h2 class="text-xl font-bold tracking-tight text-gray-900">Users</h2>
+        <p class="mt-1 text-[13px] text-gray-500">Manage your users and their permissions.</p>
+      </div>
+      <router-link to="/users/create">
+        <UiButton size="sm">
+          <component :is="icons.Plus" class="mr-1.5 h-4 w-4" />
+          Add User
+        </UiButton>
+      </router-link>
+    </div>
+
     <UiCard>
       <div class="flex items-center justify-between pb-4">
-        <div class="flex items-center space-x-2">
-          <UiInput
-            v-model="search"
-            placeholder="Search users..."
-            class="max-w-sm"
-          >
-            <template #icon>
-              <component :is="icons.Search" class="h-4 w-4" />
-            </template>
-          </UiInput>
-        </div>
+        <UiInput
+          v-model="search"
+          placeholder="Search users..."
+          class="max-w-xs"
+        >
+          <template #icon>
+            <component :is="icons.Search" class="h-4 w-4" />
+          </template>
+        </UiInput>
       </div>
-      
+
       <UiTable
         :columns="columns"
         :data="data?.data"

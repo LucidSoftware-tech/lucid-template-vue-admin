@@ -1,5 +1,49 @@
 {
-  "project": {
-    "name": "Lucid Admin"
+  "common": {
+    "appName": "Панель управления",
+    "loading": "Загрузка...",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "create": "Создать",
+    "search": "Поиск...",
+    "noResults": "Ничего не найдено.",
+    "confirm": "Подтвердить",
+    "back": "Назад"
+  },
+  "auth": {
+    "welcomeBack": "Добро пожаловать",
+    "signInTo": "Войдите в Панель управления",
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "signIn": "Войти",
+    "forgotPassword": "Забыли пароль?",
+    "noAccount": "Нет аккаунта?",
+    "applyAccess": "Запросить доступ",
+    "invalidCredentials": "Неверные данные"
+  },
+  "dashboard": {
+    "title": "Дашборд",
+    "welcome": "Добро пожаловать в Панель управления",
+    "totalUsers": "Всего пользователей",
+    "activeSessions": "Активные сессии",
+    "revenue": "Доход",
+    "growth": "Рост"
+  },
+  "users": {
+    "title": "Пользователи",
+    "searchPlaceholder": "Поиск пользователей...",
+    "name": "Имя",
+    "email": "Электронная почта",
+    "role": "Роль",
+    "status": "Статус",
+    "dateAdded": "Дата добавления",
+    "createUser": "Создать пользователя",
+    "editUser": "Редактировать пользователя"
+  },
+  "navigation": {
+    "dashboard": "Дашборд",
+    "users": "Пользователи"
   }
 }

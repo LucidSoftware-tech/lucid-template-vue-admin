@@ -1,5 +1,49 @@
 {
-  "project": {
-    "name": "Lucid Admin"
+  "common": {
+    "appName": "Admin Panel",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search...",
+    "noResults": "No results found.",
+    "confirm": "Confirm",
+    "back": "Back"
+  },
+  "auth": {
+    "welcomeBack": "Welcome back",
+    "signInTo": "Sign in to Admin Panel",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "applyAccess": "Apply for access",
+    "invalidCredentials": "Invalid credentials"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome to Admin Panel",
+    "totalUsers": "Total Users",
+    "activeSessions": "Active Sessions",
+    "revenue": "Revenue",
+    "growth": "Growth"
+  },
+  "users": {
+    "title": "Users",
+    "searchPlaceholder": "Search users...",
+    "name": "Name",
+    "email": "Email",
+    "role": "Role",
+    "status": "Status",
+    "dateAdded": "Date Added",
+    "createUser": "Create User",
+    "editUser": "Edit User"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "users": "Users"
   }
 }

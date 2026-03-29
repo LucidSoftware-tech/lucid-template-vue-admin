@@ -4,11 +4,11 @@ import AppHeader from './AppHeader.vue'
 </script>
 
 <template>
-  <div class="flex h-screen overflow-hidden bg-background">
+  <div class="flex h-screen overflow-hidden bg-white">
     <AppSidebar />
     <div class="flex flex-1 flex-col overflow-hidden">
       <AppHeader />
-      <main class="flex-1 overflow-y-auto px-4 py-8 sm:px-6 lg:px-8 bg-muted/30">
+      <main class="flex-1 overflow-y-auto bg-white px-6 py-6 lg:px-8">
         <router-view v-slot="{ Component }">
           <transition name="fade" mode="out-in">
             <component :is="Component" />
@@ -24,7 +24,6 @@ import AppHeader from './AppHeader.vue'
 .fade-leave-active {
   transition: opacity 0.15s ease;
 }
-
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;

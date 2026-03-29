@@ -32,8 +32,8 @@ const onSubmit = handleSubmit(async (values) => {
   globalError.value = ''
   try {
     await authStore.login({
-      email: values.email === 'a' ? 'a' : values.email,
-      password: values.password
+      email: values.email,
+      password: values.password,
     })
     router.push('/')
   } catch (err) {
@@ -43,31 +43,49 @@ const onSubmit = handleSubmit(async (values) => {
 </script>
 
 <template>
-  <form @submit="onSubmit" class="space-y-6">
+  <form @submit="onSubmit" class="space-y-5">
+
     <UiInput
       v-model="email"
       v-bind="emailAttrs"
-      label="Email address"
+      label="Email"
       type="text"
+      placeholder="Enter your email"
       :error="errors.email"
-      placeholder="Try 'a'"
     />
 
-    <UiInput
-      v-model="password"
-      v-bind="passwordAttrs"
-      label="Password"
-      type="password"
-      :error="errors.password"
-      placeholder="Try 'a'"
-    />
+    <div>
+      <div class="flex items-center justify-between mb-1.5">
+        <label class="text-sm font-medium leading-none text-foreground">
+          Password
+        </label>
+        <a href="#" class="text-[13px] font-medium text-primary hover:text-primary/80 transition-colors">
+          Forgot password?
+        </a>
+      </div>
+      <UiInput
+        v-model="password"
+        v-bind="passwordAttrs"
+        type="password"
+        placeholder="Enter your password"
+        :error="errors.password"
+      />
+    </div>
 
-    <div v-if="globalError" class="text-sm font-medium text-destructive">
+    <div v-if="globalError" class="rounded-md bg-destructive/10 px-3 py-2 text-sm font-medium text-destructive">
       {{ globalError }}
     </div>
 
-    <UiButton type="submit" class="w-full" :loading="isSubmitting">
-      Sign In
-    </UiButton>
+    <div class="pt-1">
+      <UiButton type="submit" class="w-full h-11 text-sm font-medium rounded-lg" :loading="isSubmitting">
+        Sign in
+      </UiButton>
+    </div>
+
+    <p class="text-center text-[13px] text-gray-500">
+      Don't have an account?
+      <a href="#" class="font-medium text-primary hover:text-primary/80 transition-colors">Apply for access</a>
+    </p>
+
   </form>
 </template>

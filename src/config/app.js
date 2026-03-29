@@ -1,5 +1,6 @@
 export const appConfig = {
-  name: 'Lucid Admin',
-  description: 'Production-ready SaaS Vue Template',
-  logo: '/vite.svg',
+  name: 'Admin Panel',
+  description: 'Production-ready SaaS Admin Template',
+  logo: null,
+  logoIcon: 'RocketIcon',
 }
