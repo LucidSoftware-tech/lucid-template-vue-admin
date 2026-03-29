@@ -12,22 +12,22 @@ import { appConfig } from '@/config/app'
     </div>
 
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      <div class="rounded-xl border border-gray-200 bg-white px-5 py-4">
+      <div class="rounded-xl border border-border bg-white px-5 py-4">
         <p class="text-[13px] font-medium text-gray-500">Total Users</p>
         <p class="mt-3 text-2xl font-bold tracking-tight text-gray-900">—</p>
       </div>
 
-      <div class="rounded-xl border border-gray-200 bg-white px-5 py-4">
+      <div class="rounded-xl border border-border bg-white px-5 py-4">
         <p class="text-[13px] font-medium text-gray-500">Active Sessions</p>
         <p class="mt-3 text-2xl font-bold tracking-tight text-gray-900">—</p>
       </div>
 
-      <div class="rounded-xl border border-gray-200 bg-white px-5 py-4">
+      <div class="rounded-xl border border-border bg-white px-5 py-4">
         <p class="text-[13px] font-medium text-gray-500">Revenue</p>
         <p class="mt-3 text-2xl font-bold tracking-tight text-gray-900">—</p>
       </div>
 
-      <div class="rounded-xl border border-gray-200 bg-white px-5 py-4">
+      <div class="rounded-xl border border-border bg-white px-5 py-4">
         <p class="text-[13px] font-medium text-gray-500">Growth</p>
         <p class="mt-3 text-2xl font-bold tracking-tight text-gray-900">—</p>
       </div>

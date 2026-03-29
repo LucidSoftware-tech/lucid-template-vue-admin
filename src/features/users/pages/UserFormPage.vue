@@ -93,7 +93,7 @@ const onSubmit = handleSubmit(async (values) => {
           <select
             v-model="role"
             v-bind="roleAttrs"
-            class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+            class="flex h-10 w-full rounded-lg border border-border bg-white px-3 py-2 text-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary"
           >
             <option value="User">User</option>
             <option value="Admin">Admin</option>

@@ -34,7 +34,7 @@ const handleLogout = () => {
 </script>
 
 <template>
-  <header class="sticky top-0 z-30 flex h-14 shrink-0 items-center justify-between border-b border-border/40 bg-white px-4 sm:px-6 lg:px-6">
+  <header class="sticky top-0 z-30 flex h-14 shrink-0 items-center justify-between border-b border-border bg-white px-4 sm:px-6 lg:px-6">
 
     <div class="flex items-center">
       <UiButton
@@ -55,7 +55,7 @@ const handleLogout = () => {
       <!-- User name + avatar -->
       <div class="flex items-center gap-2.5">
         <span class="text-[13px] font-medium text-gray-600 hidden sm:block">{{ displayName }}</span>
-        <div :class="cn('flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 text-gray-600 border border-gray-200')">
+        <div :class="cn('flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 text-gray-600 border border-border')">
           <span class="text-xs font-semibold leading-none">{{ userInitials }}</span>
         </div>
       </div>

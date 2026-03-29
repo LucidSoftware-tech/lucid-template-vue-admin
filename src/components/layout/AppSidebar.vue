@@ -28,12 +28,12 @@ const handleNavigate = (navItem) => {
 <template>
   <aside
     :class="cn(
-      'fixed inset-y-0 left-0 z-40 w-60 -translate-x-full transform border-r border-border/40 bg-white transition-transform duration-200 ease-in-out lg:static lg:translate-x-0 lg:flex lg:flex-col',
+      'fixed inset-y-0 left-0 z-40 w-60 -translate-x-full transform border-r border-border bg-white transition-transform duration-200 ease-in-out lg:static lg:translate-x-0 lg:flex lg:flex-col',
       uiStore.isSidebarOpen && 'translate-x-0'
     )"
   >
     <!-- Logo -->
-    <div class="flex h-14 shrink-0 items-center border-b border-border/40 px-5">
+    <div class="flex h-14 shrink-0 items-center border-b border-border px-5">
       <template v-if="appConfig.logo">
         <img :src="appConfig.logo" :alt="appConfig.name" class="mr-3 h-8 w-8" />
       </template>

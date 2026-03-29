@@ -38,7 +38,7 @@ const onInput = (event) => emit('update:modelValue', event.target.value)
         @blur="$emit('blur', $event)"
         @focus="$emit('focus', $event)"
         :class="cn(
-          'flex h-10 w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-foreground shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary disabled:cursor-not-allowed disabled:opacity-50',
+          'flex h-10 w-full rounded-lg border border-border bg-white px-3 py-2 text-sm text-foreground transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary disabled:cursor-not-allowed disabled:opacity-50',
           $slots.icon && 'pl-9',
           error && 'border-destructive focus-visible:ring-destructive',
           props.class
