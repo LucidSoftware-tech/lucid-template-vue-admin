@@ -13,4 +13,9 @@ export function setupGuards(router) {
       next()
     }
   })
+
+  router.afterEach((to) => {
+    const defaultTitle = import.meta.env.VITE_APP_TITLE || 'App'
+    document.title = to.meta.title ? `${to.meta.title} | ${defaultTitle}` : defaultTitle
+  })
 }
